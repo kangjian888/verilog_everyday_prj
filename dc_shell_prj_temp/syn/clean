@@ -1,0 +1,4 @@
+#!/bin/bash
+rm -fr reports results alib* 
+rm -fr WORK
+rm -f *.log *.svf
