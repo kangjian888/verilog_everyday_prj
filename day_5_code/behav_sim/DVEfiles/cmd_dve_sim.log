@@ -1,0 +1,40 @@
+set ucliGUI::state
+set ucliGUI::state
+ucliCore::getToolPID
+synopsys::env hasTB
+trigger_hier_stack_context_switch 0
+synUtils::setDVEInitPhase 1
+synopsys::dump -type VPD -file /home/IC/Desktop/verilog_everyday_prj/day_5_code/behav_sim/inter.vpd -locking
+synopsys::dump -autoflush on -fid VPD0
+set ::dve_fid VPD0
+synUtils::setDVEInitPhase 0
+ucliCore::getToolPID
+synUtils::sendTool -active _icl_setToolSocket /tmp/smlnpMokkK3
+synUtils::sendTool -active {_icl_start_rpc -version "I-2014.03" -sync_file /tmp/vcs_dve_rpc.IC.33659}
+synUtils::sendTool -active {_icl_createSharedMemory /tmp/vcs_dve_general.IC.33659}
+config endofsim noexit
+config onfail enable all
+config syscaddplainmembers
+config syscaddsourcenames
+config syscaddstructtypes
+synopsys::listing -disable
+synopsys::dump -add {seq_101dec_tb.CLK_PERIOD seq_101dec_tb.clk seq_101dec_tb.det seq_101dec_tb.rst seq_101dec_tb.sin } -aggregates  -fid VPD0
+synopsys::step
+set ucliGUI::state
+set ucliGUI::state
+synopsys::step
+set ucliGUI::state
+set ucliGUI::state
+synopsys::next
+set ucliGUI::state
+set ucliGUI::state
+synopsys::run
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+set ucliGUI::state
+if [catch {gui_sim_terminate}] {gui_sim_terminate -kill}
+synopsys::finish
+set ucliGUI::state
+set ucliGUI::state
+ucli_exit

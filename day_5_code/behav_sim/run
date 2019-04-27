@@ -1,0 +1,3 @@
+#!/bin/bash
+vcs ../rtl/seq_101det.v seq_101dec_tb.v -debug_all -top seq_101dec_tb -R -gui
+
