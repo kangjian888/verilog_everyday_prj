@@ -1,0 +1,2 @@
+#!/bin/bash
+vcs -full64 ../rtl/BCD_encoder.v BCD_encoder_tb.v +v2k -debug_all -top BCD_encoder_tb -timescale=1ns/1ps

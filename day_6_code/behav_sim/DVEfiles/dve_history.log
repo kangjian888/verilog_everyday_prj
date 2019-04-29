@@ -1,0 +1,90 @@
+# Preference setting overrides
+gui_create_pref_key -category {Globals} -key {load_detail_for_funcov} -value_type {bool} -value {false}
+
+# State setting overrides
+gui_state_default_create -off -ini
+gui_set_state_value -category Globals -key recent_sessions -value {{gui_load_session -ignore_errors -file /home/IC/Desktop/dc_shell_prj_temp/behav_sim/DVEfiles/dve_checkpoint_7089_6.tcl} {gui_load_session -ignore_errors -file /home/IC/Desktop/dc_shell_prj_temp/behav_sim/DVEfiles/dve_checkpoint_7089_5.tcl} {gui_load_session -ignore_errors -file /home/IC/Desktop/dc_shell_prj_temp/behav_sim/DVEfiles/dve_checkpoint_7089_4.tcl} {gui_load_session -ignore_errors -file /home/IC/Desktop/dc_shell_prj_temp/behav_sim/DVEfiles/dve_checkpoint_7089_3.tcl} {gui_load_session -ignore_errors -file /home/IC/Desktop/dc_shell_prj_temp/behav_sim/DVEfiles/dve_checkpoint_7089_2.tcl}}
+gui_set_state_value -category Layout -key child_console_size_x -value 1642
+gui_set_state_value -category Layout -key child_console_size_y -value 175
+gui_set_state_value -category Layout -key child_data_size_x -value 170
+gui_set_state_value -category Layout -key child_data_size_y -value 710
+gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
+gui_set_state_value -category Layout -key child_hier_colpd -value 0
+gui_set_state_value -category Layout -key child_hier_size_x -value 170
+gui_set_state_value -category Layout -key child_hier_size_y -value 710
+gui_set_state_value -category Layout -key child_source_docknewline -value false
+gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
+gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
+gui_set_state_value -category Layout -key child_source_size_x -value 1305
+gui_set_state_value -category Layout -key child_source_size_y -value 705
+gui_set_state_value -category Layout -key child_wave_colname -value 276
+gui_set_state_value -category Layout -key child_wave_colvalue -value 276
+gui_set_state_value -category Layout -key child_wave_left -value 557
+gui_set_state_value -category Layout -key child_wave_right -value 1357
+gui_set_state_value -category Layout -key main_pos_x -value 220
+gui_set_state_value -category Layout -key main_pos_y -value 66
+gui_set_state_value -category Layout -key main_size_x -value 1862
+gui_set_state_value -category Layout -key main_size_y -value 1050
+gui_set_state_value -category Layout -key stand_wave_child_docknewline -value false
+gui_set_state_value -category Layout -key stand_wave_child_pos_x -value {-2}
+gui_set_state_value -category Layout -key stand_wave_child_pos_y -value {-15}
+gui_set_state_value -category Layout -key stand_wave_child_size_x -value 1924
+gui_set_state_value -category Layout -key stand_wave_child_size_y -value 899
+gui_set_state_value -category Layout -key stand_wave_top_pos_x -value 28
+gui_set_state_value -category Layout -key stand_wave_top_pos_y -value 154
+gui_set_state_value -category Layout -key stand_wave_top_size_x -value 1947
+gui_set_state_value -category Layout -key stand_wave_top_size_y -value 1157
+gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
+gui_create_state_key -category FindDialog -key m_pUseCombo -value_type string -value {}
+gui_create_state_key -category FindDialog -key m_pWrapAround -value_type bool -value true
+gui_create_state_key -category SearchDialog -key MatchCase -value_type bool -value false
+gui_create_state_key -category SearchDialog -key MatchWord -value_type bool -value true
+gui_create_state_key -category SearchDialog -key SearchMode -value_type string -value Wildcards
+gui_create_state_key -category SearchDialog -key UseCombo -value_type bool -value true
+gui_state_default_create -off
+
+# Begin command logging
+gui_sim_run Ucli -exe simv -args {-ucligui  } -dir .
+gui_list_select -id Data.1 -selected  { {edge_det_tb.CLK_PERIOD[31:0]}   }
+gui_list_select -id Data.1 -selected  {  }
+gui_list_select -id Data.1 -selected  { edge_det_tb.data_in   }
+gui_list_select -id Data.1 -selected  { edge_det_tb.data_in  edge_det_tb.rst   }
+gui_list_select -id Data.1 -selected  { edge_det_tb.data_in  edge_det_tb.rst  edge_det_tb.clk   }
+gui_list_select -id Data.1 -selected  { edge_det_tb.data_in  edge_det_tb.rst  edge_det_tb.clk  edge_det_tb.fall_flag_asyn   }
+gui_list_select -id Data.1 -selected  { edge_det_tb.data_in  edge_det_tb.rst  edge_det_tb.clk  edge_det_tb.fall_flag_asyn  edge_det_tb.rise_flag_asyn   }
+gui_list_select -id Data.1 -selected  { edge_det_tb.data_in  edge_det_tb.rst  edge_det_tb.clk  edge_det_tb.fall_flag_asyn  edge_det_tb.rise_flag_asyn  edge_det_tb.fall_flag_syn   }
+gui_list_select -id Data.1 -selected  { edge_det_tb.data_in  edge_det_tb.rst  edge_det_tb.clk  edge_det_tb.fall_flag_asyn  edge_det_tb.rise_flag_asyn  edge_det_tb.fall_flag_syn  edge_det_tb.rise_flag_syn   }
+gui_sim_continue  
+gui_continuetime_set -value 100ns
+gui_continuetime_set -value 100ns
+gui_continuetime_set -value 100ns
+gui_list_select -id Data.1 -selected  {  }
+gui_list_select -id Data.1 -selected  { edge_det_tb.data_in   }
+gui_list_select_all -id Data.1
+gui_open_window Wave
+gui_list_add -id Wave.1 -from Data.1 { edge_det_tb.rise_flag_syn edge_det_tb.fall_flag_syn edge_det_tb.rise_flag_asyn edge_det_tb.fall_flag_asyn edge_det_tb.clk edge_det_tb.rst edge_det_tb.data_in {edge_det_tb.CLK_PERIOD[31:0]} } -insertionbar
+gui_list_select -id Wave.1 -selected  { {edge_det_tb.CLK_PERIOD[31:0]}   }
+gui_sim_restart
+gui_zoom -window Wave.1 -full
+gui_zoom -window Wave.1 -full
+gui_sim_step 
+gui_zoom -window Wave.1 -full
+gui_zoom -window Wave.1 -full
+gui_sim_next 
+gui_zoom -window Wave.1 -full
+gui_sim_continue 100ns 
+gui_sim_continue 120ns 
+gui_wv_scroll_hslidermove -id  Wave.1 37
+gui_list_select -id Wave.1 -selected  { edge_det_tb.data_in   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after Group1 {{edge_det_tb.data_in}}
+gui_list_select -id Wave.1 -selected  { edge_det_tb.rise_flag_syn   }
+gui_list_select -id Wave.1 -selected  { edge_det_tb.rise_flag_syn  edge_det_tb.fall_flag_syn   }
+gui_list_select -id Wave.1 -selected  { edge_det_tb.rise_flag_syn  edge_det_tb.fall_flag_syn  edge_det_tb.rise_flag_asyn   }
+gui_list_select -id Wave.1 -selected  { edge_det_tb.rise_flag_syn  edge_det_tb.fall_flag_syn  edge_det_tb.rise_flag_asyn  edge_det_tb.fall_flag_asyn   }
+gui_list_move  -id  Wave.1    -sid  Wave.1   -after edge_det_tb.rst {{edge_det_tb.rise_flag_syn} {edge_det_tb.fall_flag_syn} {edge_det_tb.rise_flag_asyn} {edge_det_tb.fall_flag_asyn}} 
+gui_marker_move -id  Wave.1 C1 12123
+gui_list_select -id Wave.1 -selected  {  }
+gui_list_select -id Wave.1 -selected  { {edge_det_tb.CLK_PERIOD[31:0]}   }
+gui_delete_selected -id  Wave.1
+gui_close_window -window TopLevel.2

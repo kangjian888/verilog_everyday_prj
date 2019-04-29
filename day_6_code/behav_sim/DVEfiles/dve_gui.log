@@ -1,0 +1,25 @@
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03; Runtime version I-2014.03;  Apr 29 08:55 2019
+VCD+ Writer I-2014.03 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/home/IC/Desktop/verilog_everyday_prj/day_6_code/behav_sim/inter.vpd' was opened successfully.
+$finish called from file "edge_det_tb.v", line 81.
+$finish at simulation time               119000
+Simulation complete, time is 119000 ps.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 119000 ps
+CPU Time:      0.890 seconds;       Data structure size:   0.0Mb
+Mon Apr 29 08:56:41 2019
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version I-2014.03; Runtime version I-2014.03;  Apr 29 08:58 2019
+VCD+ Writer I-2014.03 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/home/IC/Desktop/verilog_everyday_prj/day_6_code/behav_sim/inter.vpd' was opened successfully.
+100000 ps
+$finish called from file "edge_det_tb.v", line 81.
+$finish at simulation time               119000
+Simulation complete, time is 119000 ps.
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 119000 ps
+CPU Time:      0.610 seconds;       Data structure size:   0.0Mb
+Mon Apr 29 08:58:54 2019

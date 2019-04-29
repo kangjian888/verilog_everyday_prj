@@ -1,0 +1,3 @@
+#!/bin/bash
+vcs ../rtl/edge_det_syn.v ../rtl/edge_det_asyn.v edge_det_tb.v -debug_all -top edge_det_tb -R -gui
+
