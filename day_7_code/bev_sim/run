@@ -1,0 +1,3 @@
+#!/bin/bash
+vcs ../rtl/serial_parallel_trans.v serial_parallel_trans_tb.v +v2k -debug_all -top serial_parallel_trans_tb -R -gui
+
